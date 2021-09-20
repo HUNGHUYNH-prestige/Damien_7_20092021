@@ -35,8 +35,8 @@ const fs = require('fs');
 const db = require('./models');
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE, 'root', process.env.PASSWORD, {
-    host: 'localhost',
-    dialect: 'mysql'
+    host: process.env.HOST,
+    dialect: process.env.DIALECT
   });
 try {
     db.sequelize.authenticate();
