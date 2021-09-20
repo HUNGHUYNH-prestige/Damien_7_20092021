@@ -11,8 +11,9 @@ const express = require('express');
 
 // dotenv for environment protection
 const dotenv = require('dotenv');
-dotenv.config();
-console.log(dotenv.config());
+const dotenvresult = dotenv.config();
+//console.log(dotenv.config());
+console.log(dotenvresult);
 
 // helmet : http headers security in Express
 const helmet = require('helmet');
@@ -28,6 +29,21 @@ const cookieSession = require('cookie-session');
 
 // file system : access the file in the system
 const fs = require('fs');
+
+/* MySQL -- -- -- DATABASE -- -- -- Connexion */
+
+const db = require('./models');
+const { Sequelize } = require('sequelize');
+const sequelize = new Sequelize(process.env.DATABASE, 'root', process.env.PASSWORD, {
+    host: 'localhost',
+    dialect: 'mysql'
+  });
+try {
+    db.sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
 
 // - - - ROUTES - - -
 // const sauceRoutes = require('./routes/sauce');
@@ -84,7 +100,13 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // ROUTES for API REST
 //app.use('/api/sauces', sauceRoutes);
+//app.use('/api/users', userRoutes);
+//app.use('/api/posts', postRoutes);
 
+// testing the API
+app.get('/', (req, res, next) => {
+    res.json('ok');
+})
 
 // export the module app
 module.exports = app;
