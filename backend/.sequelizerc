@@ -1,0 +1,23 @@
+require("babel-register");
+
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('config', 'config.js'),
+  'models-path': path.resolve('models'),
+  'seeders-path': path.resolve('seeders'),
+  'migrations-path': path.resolve('migrations')
+}
+
+/*
+
+To enable more modern constructions in your migrations and seeders,
+you can simply install babel-register
+and require it at the beginning of .sequelizerc:
+
+npm i --save-dev babel-register
+
+page : https://sequelize.org/master/manual/migrations.html
+
+
+*/
