@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
+      <!-- router-view for ROUTER folder with inside index.js -->
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <!-- router-link for VIEWS folder with inside Home, About, ... -->
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
 <style lang="scss">
