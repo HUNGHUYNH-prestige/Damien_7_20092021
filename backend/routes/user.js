@@ -9,9 +9,13 @@ const passwordValidation = require('../middleware/passwordValidation')
 // routes
 router.post('/signup', passwordValidation, userCtrl.signup);
 router.post('/login',                      userCtrl.login);
+
+// general
+router.get('/',        auth,               userCtrl.getAllUsers);
+
+// administration
 router.delete('/:id',  auth, multer,       userCtrl.deleteUser);
 router.put('/:id',     auth, multer,       userCtrl.editUser);
-router.get('/',        auth,               userCtrl.getAllUsers);
 router.get('/:id',     auth,               userCtrl.getOneUser);
 
 console.log('--->');
