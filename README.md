@@ -38,8 +38,12 @@ Login with JSONWEBTOKEN : JWT authentication
 ```
 
 ```
-The API is written in JavaScript for Node.js and requires MySQL to be running.
-The Sequelize ORM is used to connect to MySQL, define the database schema and read/write data, and Express (framework) is used as the web server for the API.
+The API is written in JavaScript for Node.js
+and requires MySQL to be running.
+
+The Sequelize ORM is used to connect to MySQL,
+define the database schema and read/write data,
+and Express (framework) is used as the web server for the API.
 ```
 
 ## Project setup

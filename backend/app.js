@@ -178,14 +178,14 @@ app.post('/', (req, res, next) => {
   });
   console.log('POST is ok');
 });
-// testing put
+// testing put ==> cannot test
 app.post('/', (req, res, next) => {
   res.json({
     name: 'Put',
     message: 'Put is ok'
   });
   console.log('PUT is ok');
-})
+});
 
 
 // export the module app
