@@ -1,8 +1,14 @@
+/*
+// warning if set
 import Vue from 'vue'
+import VueRouter from 'vue-router'
+*/
+
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
-Vue.useAttrs(VueRouter);
+// warning if set
+//Vue.use(VueRouter);
 
 const routes = [
   {
