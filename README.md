@@ -6,27 +6,23 @@ GROUPOMANIA is a socialnetwork for internal personnal.
 
 ## Project setup
 ```
-npm install
+Before starting anything, use the command line to do :
+cd groupomania
+You may need to do cd until you reach the right folder
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm install in folder name : groupomania
 ```
 
-### Lints and fixes files
 ```
-npm run lint
+npm run serve => in the command line in order to run the server for vue
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+```
+Then go to => localhost:8080
+Follow the localhost displayed information in your command line
+```
 
 # groupomania backend
 
@@ -77,19 +73,4 @@ MIGRATIONS with :
 npx sequelize db:migrate
 If help is needed do :
 npx sequelize --help
-```
-
-### something
-```
-npm run start
-```
-
-### something
-```
-npm run build
-```
-
-### something
-```
-npm run lint
 ```
